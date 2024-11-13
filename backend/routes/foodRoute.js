@@ -6,7 +6,7 @@ import path from "path";
 const foodRouter = express.Router()
 
 //Image storage engine
-
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
 const uploadFolder = path.join(__dirname, "../uploads");
 const storage = multer.diskStorage({
     destination: uploadFolder,
